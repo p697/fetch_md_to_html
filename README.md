@@ -1,7 +1,21 @@
-通过fetch获取一个md，将md（字符形式）通过react-markdown转化为html
-搭配github-markdown样式库
+## 用法
 
-这个测试用的md文件是我放在阿里云对象存储桶里的
+```jsx
+<MdPage 
+  url="your md url"
+/>
+```
+
+---
+
+#### 通过fetch获取一个md，将md通过react-markdown转化为react组件
+
+#### 使用github-markdown样式库，搭配react-syntax-highlighter实现代码高亮
+
+#### 测试用md文件存放在对象存储桶
+
+
+
 
 
 
