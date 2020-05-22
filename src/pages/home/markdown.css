@@ -1,6 +1,7 @@
 .markdown-body {
   width: 800px;
   margin: auto;
+  padding-bottom: 24px;
 }
 
 
@@ -211,6 +212,8 @@
 
 .markdown-body h1 {
   font-size: 32px;
+  padding-top: 24px!important;
+  padding-bottom: 24px!important;
 }
 
 .markdown-body h1,

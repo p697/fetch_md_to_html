@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import CodeBlock from './code_block'
-import './github_markdown.css'
+import './markdown.css'
 
-const ReactMarkdown = require('react-markdown')
+const ReactMarkdown = require('react-markdown/with-html')
 
 export default Page => {
   const [mdStr, setMdStr] = useState('加载中...')
@@ -11,13 +11,13 @@ export default Page => {
     .then((res) => res.text())
     .then(data => {
       setMdStr(data)
-      console.log(data)
     })
 
   return (
     <div className="markdown-body">
       <ReactMarkdown 
         source={mdStr} 
+        escapeHtml={false}
         renderers={{
           code: CodeBlock
         }}
