@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CodeBlock from './code_block'
 import './github_markdown.css'
 
 const ReactMarkdown = require('react-markdown')
@@ -15,7 +16,12 @@ export default Page => {
 
   return (
     <div className="markdown-body">
-      <ReactMarkdown source={mdStr} />
+      <ReactMarkdown 
+        source={mdStr} 
+        renderers={{
+          code: CodeBlock
+        }}
+      />
     </div>
   );
 }
